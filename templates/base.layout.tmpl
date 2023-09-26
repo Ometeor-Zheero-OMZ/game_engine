@@ -1,0 +1,210 @@
+{{define "base"}}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        property="og:description"
+        content="Ataria is a game engine aimed for the versatiles who yearns to create, share, and play your own games"
+      />
+      <meta property="og:title" content="Ataria Game Engine" />
+      <meta property="og:image" content="" />
+      <meta property="og:image:width" content="600" />
+      <meta property="og:image:height" content="315" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <link rel="stylesheet" href="/static/styles/style.css" />
+      <title>Ataria - Game Engine & Emulator</title>
+    </head>
+    <body>
+      <!-- Header -->
+      <header class="header">
+        <div class="header-inner">
+          <div id="logo">
+            <a href="/">Ataria</a>
+          </div>
+          <nav class="header-nav">
+            <ul class="header-ul">
+              <li class="header-li">
+                <a href="/features">Features</a>
+              </li>
+              <li class="header-li">
+                <a href="#">Blog</a>
+              </li>
+              <li class="header-li">
+                <a href="#">Community</a>
+              </li>
+              <li class="header-li">
+                <a href="#">Download</a>
+              </li>
+            </ul>
+            <div class="header-nav-item">
+              <a id="signup-btn" class="header-button signup">Get started</a>
+            </div>
+            <div class="header-nav-item">
+              <a id="login-btn" class="header-button login">Login</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      {{block "content" .}}
+
+      {{end}}
+
+      <!-- Form Container -->
+      <div class="form-container">
+        <div class="signup-form-wrapper modal">
+          <div class="x-btn signup-x">&times</div>
+          <div class="form-header">
+            <h1>Sign up to</h1>
+            <h3>Get a new account</h3>
+          </div>
+          <form class="form">
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-group">
+              <i class="far fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-key"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <button type="button">Sign Up</button>
+          </form>
+        </div>
+        <div class="login-form-wrapper modal">
+          <div class="x-btn login-x">&times</div>
+          <div class="form-header">
+            <h1>Sign into</h1>
+            <h3>Your Ataria ID</h3>
+          </div>
+          <form class="form">
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-key"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <button type="button">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <section id="cta" class="cta-container">
+        <div class="cta-items">
+          <h5>Boost Your Creativity Now</h5>
+          <div class="btns">
+            <button id="signup-btn" class="cta-button signup">Get Started</button>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="footer-items">
+          <!-- Logo -->
+          <div id="logo">
+            <a href="#">Ataria</a>
+          </div>
+
+          <!-- Menus Container -->
+          <div class="menus-container">
+            <!-- Menu 1 -->
+            <div class="menu-items">
+              <div class="menu-text">Features</div>
+              <div class="link-items">
+                <a href="#" class="link-item">Ataria Engine</a>
+                <a href="#" class="link-item">Ataria 2D Maker</a>
+                <a href="#" class="link-item">Ataria VR</a>
+              </div>
+            </div>
+
+            <!-- Menu 2 -->
+            <div class="menu-items">
+              <div class="menu-text">Resources</div>
+              <div class="link-items">
+                <a href="#" class="link-item">Assets</a>
+                <a href="#" class="link-item">Gallery</a>
+                <a href="#" class="link-item">Support</a>
+              </div>
+            </div>
+
+            <!-- Menu 3 -->
+            <div class="menu-items">
+              <div class="menu-text">Services</div>
+              <div class="link-items">
+                <a href="#" class="link-item">About</a>
+                <a href="#" class="link-item">FAQ</a>
+                <a href="#" class="link-item">Contact</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Container -->
+          <div class="flex space-x-6">
+            <a href="#">
+              <img
+                src="/static/images/icon-twitter.svg"
+                class="ficon"
+                id="twitter"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/static/images/icon-discord.svg"
+                class="ficon"
+                id="discord"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="/static/images/icon-youtube.svg"
+                class="ficon"
+                id="youtube"
+              />
+            </a>
+            <a href="#">
+              <img src="/static/images/icon-steam.svg" class="ficon" id="steam" />
+            </a>
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div class="copyright-container">
+          <h3 style="color: #fff">
+            &copy;2023 <span class="copyright-title">Ataria</span>
+          </h3>
+        </div>
+      </footer>
+
+      <script src="/static/js/main.js"></script>
+      <script src="/static/js/form.js"></script>
+      <script src="/static/js/boxes.js"></script>
+
+
+      {{block "js" .}}
+
+      {{end}}
+
+    </body>
+  </html>
+{{end}}
